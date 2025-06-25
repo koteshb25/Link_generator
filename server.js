@@ -5,7 +5,12 @@ const cors = require("cors");
 const shareRoutes = require("./routes/Share");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_BASE_URL, // from your .env
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 mongoose
