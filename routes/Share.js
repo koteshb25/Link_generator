@@ -62,8 +62,8 @@ router.post("/create", async (req, res) => {
   });
 
   await newShare.save();
-  res.json({ url: `http://localhost:3000/share/${shareId}`, pin });
-});
+res.json({ url: `https://link-generator-eight.vercel.app/share/${shareId}`, pin });
+
 
 // POST: Verify PIN and get data
 router.post("/verify", async (req, res) => {
