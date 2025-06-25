@@ -67,7 +67,7 @@ res.json({
   url: `${process.env.FRONTEND_BASE_URL}/share/${shareId}`, 
   pin 
 });
-
+});
 
 // POST: Verify PIN and get data
 router.post("/verify", async (req, res) => {
